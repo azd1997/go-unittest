@@ -62,7 +62,7 @@ func TestFuncV4(t *testing.T) {
 			//常规测试
 			{"azdloveazdaawerrz", 7},
 			{"helloworld", 5},
-			{"happynewyear", 5},  //注意这里故意写错一个
+			{"happynewyear", 5},
 			//边缘测试
 			{"", 0},
 			{"b", 1},
@@ -88,8 +88,8 @@ func TestFuncV5(t *testing.T) {
 		})
 
 		convey.Convey("边界情况", func() {
-			str := "helloworld"
-			should := 5
+			str := ""
+			should := 0
 			convey.So(maxLengthOfNonRepeatSubStr(str), convey.ShouldEqual, should)
 		})
 	})
